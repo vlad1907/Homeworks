@@ -1,7 +1,29 @@
-.someClass {
-
+.greeting {
+    display: flex;
+    align-items: flex-start;
 }
 
 .error {
-    border: 1px solid red;
+    color: red;
+    height: 21px;
+    margin-left: 10px;
+}
+
+.input {
+    margin: 10px;
+}
+
+.errorInput {
+    margin: 10px;
+    border: 2px solid red
+}
+
+.button {
+    margin: 10px;
+    width: 60px;
+
+}
+
+.count {
+    margin: 10px;
 }
