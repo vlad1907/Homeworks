@@ -1,3 +1,22 @@
 .App {
+    margin-left: 15px;
+    color: #1BFD9C;
+}
 
+h2 {
+    text-align: center;
+    color: ghostwhite;
+    text-shadow:
+            0 0 2px #82fbff,
+            0 0 8px #82fbff,
+            0 0 12px #0ff
+}
+
+hr {
+    margin-left: -15px;
+}
+
+h3 {
+    color: #1bfda6;
+    margin-top: 10px;
 }

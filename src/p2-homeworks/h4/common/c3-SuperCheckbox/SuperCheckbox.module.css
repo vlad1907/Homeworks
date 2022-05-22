@@ -16,8 +16,11 @@
 }
 
 .checkbox:checked {
+    appearance: none;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHAyAmCzUwsS4TTbkBr2V1Atz7TCv4Wv9Xkw&usqp=CAU");
+    background-size: 20px;
 }
 
 .checkbox:focus {
-    outline: 2px solid #1BFD9C;
+    outline: 2px solid #82fbff;
 }
