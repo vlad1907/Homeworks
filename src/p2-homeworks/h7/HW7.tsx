@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import SuperSelect from './common/c5-SuperSelect/SuperSelect'
 import SuperRadio from './common/c6-SuperRadio/SuperRadio'
+import s from './common/SelectRadio.module.css'
 
 const arr = ['x', 'y', 'z']
 
@@ -10,7 +11,7 @@ function HW7() {
     return (
         <div>
             <hr/>
-            homeworks 7
+            <h3>Homework 7</h3>
 
             {/*should work (должно работать)*/}
             <div>
@@ -20,7 +21,7 @@ function HW7() {
                     onChangeOption={onChangeOption}
                 />
             </div>
-            <div>
+            <div className={s.radio}>
                 <SuperRadio
                     name={'radio'}
                     options={arr}

@@ -1,0 +1,24 @@
+.radio {
+    margin: 15px;
+}
+
+.radioEl {
+    margin: 10px;
+}
+
+.selectEl {
+    padding: 7px;
+    font-weight: bold;
+    font-size: 17px;
+    width: 120px;
+    margin-left: 20px;
+    border: 2px solid #82fbff;
+    border-radius: 10px;
+    color: #ffffff;
+    outline-color: #82fbff;
+    background-color: rgb(24, 38, 54);
+}
+
+
+
+
