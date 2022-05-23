@@ -1,0 +1,23 @@
+.editSpan {
+    border-right: .15em solid #82fbff;
+    letter-spacing: .15em;
+    animation: blink-caret .75s step-end infinite;
+    cursor: pointer;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: #82fbff;
+    }
+}
+
+.editSpan:hover {
+    transition-duration: 0.6s;
+    color: #fff;
+    text-shadow: 0 0 5px #82ffc9,
+    0 0 10px #82ffc9,
+    0 0 20px #0ff
+}
