@@ -1,22 +1,36 @@
-import React from 'react'
+import React, {DetailedHTMLProps, InputHTMLAttributes} from 'react'
+import {Box, Slider} from "@mui/material";
 
-type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
-    // min, max, step, disable, ...
+
+type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+
+type SuperDoubleRangePropsType = DefaultInputPropsType & {
+    onChangeRange: (data: number[]) => void
+    min: number
+    max: number
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-        onChangeRange, value,
-        // min, max, step, disable, ...
+        onChangeRange, min, max
     }
 ) => {
-    // сделать самому, можно подключать библиотеки
+    const value = [min, max];
+    const onChange = (event: Event, value: number | number[]) => {
+        onChangeRange(value as number[])
+    }
 
     return (
         <>
-            DoubleRange
+            <Box sx={{width: 300}}>
+                <Slider
+                    getAriaLabel={() => 'Temperature range'}
+                    value={value}
+                    onChange={onChange}
+                    valueLabelDisplay="auto"
+
+                />
+            </Box>
         </>
     )
 }

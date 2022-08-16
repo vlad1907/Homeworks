@@ -3,34 +3,45 @@ import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+    const [min, setMin] = useState(0)
+    const [max, setMax] = useState(100)
+
+    const onDoubleRange = (data: number[]) => {
+        const [min, max] = data
+        setMin(min)
+        setMax(max)
+    }
+
+    const onChangeRange = (val1: number) => {
+        setMin(val1)
+    }
 
     return (
         <div>
             <hr/>
-            homeworks 11
+            <h3>Homework 11</h3>
 
-            {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
+                <div>
+                    <span>{min}</span>
+                    <span style={{marginLeft: '280px'}}>{max}</span>
+                </div>
                 <SuperRange
-                    // сделать так чтоб value1 изменялось
+                    onChangeRange={onChangeRange}
+                    value={min}
                 />
             </div>
 
-            <div>
-                <span>{value1}</span>
+            <div style={{marginLeft: '10px'}}>
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                    onChangeRange={onDoubleRange}
+                    min={min}
+                    max={max}
                 />
-                <span>{value2}</span>
+                <span>{min}</span>
+                <span style={{marginLeft: '280px'}}>{max}</span>
             </div>
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperRange/>*/}
-            {/*<AlternativeSuperDoubleRange/>*/}
             <hr/>
         </div>
     )
